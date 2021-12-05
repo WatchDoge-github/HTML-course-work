@@ -301,7 +301,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-@media (max-width: 1080px){
+@media (max-width: 1400px){
     .content-container {
         display: flex; /* Центровка содержимого страницы */
         justify-content: center;
@@ -310,7 +310,7 @@ body::-webkit-scrollbar-thumb {
         height: 100vh; /* Центровка по вертикали */
     }
 	.baseContainer {
-		width: 400px;
+		width: 800px;
 		margin: auto;
 		box-shadow: 0px 5px 100px rgba(0, 0, 0, 0.75); /* Тень - offset-x, offset-y, blur, color */
 	}
