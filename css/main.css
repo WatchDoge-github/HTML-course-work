@@ -1,0 +1,346 @@
+
+@font-face {
+    font-family: 'BankGothicBT-Medium';
+    src: url('BankGothicMdBT.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Usually-font';
+    src: url('Usually-font.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cheque-Regular';
+    src: url('Cheque-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cheque-Black';
+    src: url('Cheque-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BBT';
+    src: url('BBT.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minaeff_Ect-Regular';
+    src: url('Minaeff_Ect-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    background-color: #252525; /* Фон страницы */
+    margin: 0; /* Убираем отступы от краев страницы */
+}
+header {
+    display: flex;
+    justify-content: space-around; /* Разметка элементов меню */
+    align-items: center;
+    background-color: #696969; /* Фон шапки */
+    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.75); /* Тень - offset-x, offset-y, blur, color */
+    width: 100%;
+    height: 70px; /* Фикс. высота шапки */
+}
+.fontstyleone
+{
+	color: #303030; 
+	font-size: 40px; 
+	font-family: Cheque-Black;
+}
+.fontstyleflex
+{
+	color: #7E7E7E;
+	font-family: BBT;
+    font-size: 20px;
+}
+#logo {
+    width: 90px; /* Ширина лого */
+    height: 40px; /* Высота лого */
+    padding-top: 10px; /* Отступ от краев сверху */
+	padding-left: 10px; /* Отступ от краев слева */
+
+    animation: logoZoomOut 250ms; /* Анимация при нанведении */
+    transition: all ease-in-out; /* Параметр анимации */
+}
+#logo:hover {
+    width: 135px; /* Ширина лого */
+    height: 60px; /* Высота лого */
+
+    animation: logoZoomIn 250ms; /* Анимация при нанведении */
+}
+#nav_items {
+    display: flex;
+    gap: 48px; /* Расстояние между элементами меню */
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+#nav_items a {
+    display: inline-block;
+    color: #303030; /* Цвет текста */
+    border: 2px solid rgba(200, 149, 149, 0); /* Обводка элемента */
+    border-radius: 5px; /* Скругление */
+    text-decoration: none; /* Убираем синие ссылки */
+    font-family: 'Usually-font'; /* Шрифт элементов меню */
+    padding: 10px; /* Добавляем пространство вокруг текста */
+    animation: borderFadeOut 500ms; /* Анимация при нанведении */
+    transition: all ease-in-out; /* Параметр анимации */
+}
+#nav_items a:hover {
+    border: 2px solid #ec1a24; /* Обводка элемента */
+    border-radius: 5px; /* Скругление */
+
+    animation: borderFadeIn 500ms; /* Анимация при нанведении */
+    transition: all ease-in-out; /* Параметр анимации */
+}
+@keyframes borderFadeIn {
+    from {
+        border-color: rgba(200, 149, 149, 0)
+    }
+    to {
+        border-color: #ec1a2470;
+    }
+}
+@keyframes borderFadeOut {
+    from {
+        border-color: #0000FF;
+    }
+    to {
+        border-color: rgba(200, 149, 149, 0);
+    }
+}
+@keyframes logoZoomIn {
+    from {
+        width: 90px;
+        height: 40px;
+    }
+    to {
+        width: 135px;
+        height: 60px;
+    }
+}
+@keyframes logoZoomOut {
+    from {
+        width: 135px;
+        height: 60px;
+    }
+    to {
+        width: 90px;
+        height: 40px;
+    }
+}
+.content-container {
+    display: flex; /* Центровка содержимого страницы */
+    justify-content: center;
+    align-items: center;
+
+    height: 70vh; /* Центровка по вертикали */
+}
+.content-container h1 {
+    font-family: BankGothicBT-Medium; /* Шрифт заголовка */
+    font-size: 40px;
+    text-transform: uppercase; /* Заглавные буквы */
+    color: #7E7E7E;
+}
+span.highlighted-text {
+    color: #0000FF;
+    font-size: 40px;
+}
+.text-container {
+    width: 60%;
+}
+.subtitle {
+    font-family: Minaeff_Ect-Regular; /* Шрифт заголовка */
+    font-size: 20px;
+    color: #7E7E7E;
+}
+.content-container:nth-child(1) {
+    flex-direction: row;
+}
+.content-container:nth-child(2) {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+.content-container:nth-child(3) {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+.content-container:nth-child(4) {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+.content-container:nth-child(5) {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+.content-container:nth-child(6) {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+footer {
+    background-color: #696969;
+    width: 100%;
+    text-align: center;
+    font-family: BankGothicBT-Medium;
+	font-size: 40px;
+    padding: 1px 0px;
+}
+
+
+.flex-card1, .flex-card2, .flex-card3 {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+    border-radius: 20px;
+    background: #303030;
+    font-weight: bold;
+    font-size: smaller;
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.flex-card1:hover, .flex-card2:hover, .flex-card3:hover {
+    transform: scale(0.8);
+}
+
+#home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-basis: 30%;
+}
+#home img {
+    width: 60%;
+    height: 40%;
+    margin-top: 10px;
+}
+/*шрифт flexbox*/
+#home h1 {
+    color: #EC1A23;
+    font-family: BankGothicBT-Medium;
+}
+
+#home h1, p {
+    margin: 0 10px;
+}
+
+.flex-card1 h1{
+    align-self: flex-start;
+}
+.flex-card2 h1 {
+    align-self: center; 
+}
+.flex-card3 h1{
+    align-self: flex-end;
+}
+
+.flex-card1 p {
+    text-align: left;
+}
+
+.flex-card2 p {
+    text-align: center;
+}
+
+.flex-card3 p {
+    text-align: right;
+}
+
+.flex-card1 img {
+    align-self: flex-start;
+    margin-left: 10px;
+}
+.flex-card2 img{
+    align-self: center;
+}
+.flex-card3 img{
+    align-self: flex-end;
+    margin-right: 10px;
+}
+body::-webkit-scrollbar {
+    width: 20px;               /* ширина scrollbar */
+}
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #696969, #ec1a24, #696969);    /* цвет плашки */
+    border-radius: 10px;       /* закругления плашки */
+}
+
+
+.middleContainer {
+    z-index: 2;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    min-width: 800px;
+    background: #303030;
+}
+.baseContainer {
+    width: 1600px;
+    margin: auto;
+    box-shadow: 0px 5px 100px rgba(0, 0, 0, 0.75); /* Тень - offset-x, offset-y, blur, color */
+}
+
+
+#box {
+	
+	overflow: auto;
+	height: 40px;
+}
+
+
+@media (max-width: 1080px){
+    .content-container {
+        display: flex; /* Центровка содержимого страницы */
+        justify-content: center;
+        align-items: center;
+    
+        height: 100vh; /* Центровка по вертикали */
+    }
+	.baseContainer {
+		width: 900px;
+		margin: auto;
+		box-shadow: 0px 5px 100px rgba(0, 0, 0, 0.75); /* Тень - offset-x, offset-y, blur, color */
+	}
+	.fontstyleone{
+		color: #303030; 
+		font-size: 40px; 
+		font-family: Cheque-Regular;
+	}
+}
+
+  .back_to_top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #303030;
+    color: #696969;
+    cursor: pointer;
+    border-radius: 8px;
+    display: none;
+  }
+  
+  .back_to_top:hover {
+    background: #ec1a24;
+  }
+  
+  .back_to_top-show {
+    display: block;
+  }
